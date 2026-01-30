@@ -11,6 +11,8 @@ import funkin.ui.mainmenu.MainMenuState;
 import funkin.util.Constants;
 import funkin.util.ReflectUtil;
 
+import funkin.FunkinMemory;
+
 import flixel.FlxG;
 import flixel.util.FlxColor;
 
@@ -53,9 +55,9 @@ class ModMenuMain extends ScriptedModule {
     }
 
     override function onCreate(event:ScriptEvent) {
-        FunkinSprite.cacheTexture(Paths.image("modmenu/default_icon"));
-        FunkinSprite.cacheTexture(Paths.image("modmenu/funkin_icon"));
-        FunkinSprite.cacheTexture(Paths.image("modmenu/ui/reset"));
+        FunkinMemory.cacheTexture(Paths.image("modmenu/default_icon"));
+        FunkinMemory.cacheTexture(Paths.image("modmenu/funkin_icon"));
+        FunkinMemory.cacheTexture(Paths.image("modmenu/ui/reset"));
 
         initCheckState = true;
         initButton();
